@@ -4,7 +4,7 @@ body {
 
 #landing-header {
     z-index: 1;
-    /*default position value (static) will ignore the z-index attribute*/
+    /*if use default position value (static), the z-index attribute would be ignored*/
     position: relative;
     text-align: center;
     padding-top: 40vh;

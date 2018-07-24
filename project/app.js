@@ -16,10 +16,20 @@ var express         = require("express"),
 var campgroundRoutes    = require("./routes/campgrounds"),
     commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
-    
+
+// 1. use local DB
 // mongoose.connect("mongodb://localhost/yelp_camp");
-// connect mongoDB from mLab.com
-mongoose.connect("mongodb://admin:admin1@ds147451.mlab.com:47451/yeeeelpcamp");
+
+// 2. use mLab: hosted DB
+//    use Environment Variables to switch the DBs between development mode and deployed mode
+//    using Environment Variables also hides configuration information
+//    configure the deployed mode's DATABASEURL on deploying website
+mongoose.connect(process.env.DATABASEURL);
+
+// "mongodb://admin:admin1@ds147451.mlab.com:47451/yeeeelpcamp"
+
+
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
