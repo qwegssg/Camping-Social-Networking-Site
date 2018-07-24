@@ -26,11 +26,6 @@ var campgroundRoutes    = require("./routes/campgrounds"),
 //    configure the deployed mode's DATABASEURL on deploying website
 mongoose.connect(process.env.DATABASEURL);
 
-// "mongodb://admin:admin1@ds147451.mlab.com:47451/yeeeelpcamp"
-
-
-
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 // __dirname will always refer to the current directory
