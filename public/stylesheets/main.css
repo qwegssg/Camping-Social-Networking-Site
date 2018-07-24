@@ -17,18 +17,3 @@
 .deleteForm {
     display: inline;
 }
-
-
-
-
-.card {
-    padding: 0;
-}
-
-.card .card-img-top {
-    width: 100%;
-}
-
-.card .card-body .card-title {
-    padding: 9px;
-}
