@@ -1,0 +1,19 @@
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+}
+
+.well .row {
+     padding: 9px;
+}
+
+.deleteForm {
+    display: inline;
+}
