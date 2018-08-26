@@ -53,8 +53,9 @@ router.get("/:id", function(req, res) {
     
     // retrive the campgrounds, populate the comments array in campgrounds, then execute.
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground) {
-        if(err) {
-            console.log(err);
+        if(err || !foundCampground) {
+            req.flash("error", "Campground not found");
+            res.redirect("back");
         } else {
             // render the show page with the data from DB using id
             res.render("./campgrounds/show", {campground: foundCampground});
